@@ -1,0 +1,7 @@
+dependencies:
+  lvgl/lvgl:
+    version: "^9.0.0"
+  espressif/esp_lcd_touch_ft5x06:
+    version: "^1.0.0"
+  joltwallet/littlefs:
+    version: "^1.14.0"

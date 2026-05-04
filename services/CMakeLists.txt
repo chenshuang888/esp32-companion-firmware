@@ -1,0 +1,31 @@
+idf_component_register(
+    SRCS
+        "time_service.c"
+        "manager/time_manager.c"
+        "manager/weather_manager.c"
+        "weather_service.c"
+        "manager/notify_manager.c"
+        "notify_service.c"
+        "manager/media_manager.c"
+        "manager/playlist_manager.c"
+        "media_service.c"
+        "manager/system_manager.c"
+        "manager/device_stats.c"
+        "system_service.c"
+        "manager/battery_sim.c"
+        "dynapp_bridge_service.c"
+        "dynapp_upload_service.c"
+        "manager/dynapp_upload_manager.c"
+        "manager/dynapp_mailbox.c"
+    INCLUDE_DIRS
+        "."
+        "manager"
+    PRIV_REQUIRES
+        bt
+    REQUIRES
+        esp_timer
+        storage
+        drivers
+        driver
+        app_update
+)

@@ -1,0 +1,16 @@
+# ESP32-S3 N16R8 partition layout (16MB)
+#   bootloader : 0x0000   (size 0x8000, 32KB, ESP-IDF 固定位置)
+#   part.table : 0x8000   (size 0x1000, 4KB)
+#   nvs        : 0x9000   (size 0x6000, 24KB)        WiFi/BT 配对、settings_store、notify_manager 快照
+#   phy_init   : 0xf000   (size 0x1000, 4KB)         RF 校准数据
+#   factory    : 0x10000  (size 0x600000, 6MB)       主应用镜像（含嵌入 TTF ~3.4MB，LVGL，BLE）
+#   storage    : auto     (size 0x9EF000, ~9.9MB)    LittleFS：动态 App 脚本 + 未来日志/缓存
+#
+# storage 分区 subtype = 0x83 表示 LittleFS（IDF 不识别字面量，只能写数字）。
+# 之前是 spiffs；切换后必须 idf.py erase-flash 一次，否则 mount 会因 magic 不匹配失败。
+#
+# Name,      Type, SubType, Offset,   Size,      Flags
+nvs,         data, nvs,     0x9000,   0x6000,
+phy_init,    data, phy,     ,         0x1000,
+factory,     app,  factory, 0x10000,  0x600000,
+storage,     data, 0x83,    ,         0x9EF000,

@@ -1,0 +1,17 @@
+idf_component_register(
+    SRCS
+        "lcd_panel.c"
+        "touch_ft5x06.c"
+        "lvgl_port.c"
+        "ble_driver.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        lvgl
+        esp_lcd_touch_ft5x06
+        esp_timer
+        driver
+        esp_lcd
+    PRIV_REQUIRES
+        bt
+)

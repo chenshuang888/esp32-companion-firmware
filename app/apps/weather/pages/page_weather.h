@@ -1,0 +1,5 @@
+#pragma once
+
+#include "sub_router.h"
+
+const page_callbacks_t *page_weather_get_callbacks(void);

@@ -1,0 +1,34 @@
+#pragma once
+
+#include "driver/i2c_master.h"
+#include "driver/spi_master.h"
+
+#define BOARD_LCD_H_RES 240
+#define BOARD_LCD_V_RES 320
+
+#define BOARD_LCD_PIN_SCK 12
+#define BOARD_LCD_PIN_MOSI 11
+#define BOARD_LCD_PIN_CS 10
+#define BOARD_LCD_PIN_DC 9
+#define BOARD_LCD_PIN_RST 8
+#define BOARD_LCD_PIN_BL 14
+
+#define BOARD_LCD_SPI_HOST SPI2_HOST
+#define BOARD_LCD_SPI_FREQ_HZ (40 * 1000 * 1000)
+#define BOARD_LCD_COLOR_INVERT 1
+
+/* 当前方向：旋转，不交换 XY */
+#define BOARD_LCD_MIRROR_X 1
+#define BOARD_LCD_MIRROR_Y 1
+#define BOARD_LCD_SWAP_XY 0
+
+#define BOARD_LCD_BACKLIGHT_DEFAULT 128
+
+#define BOARD_TOUCH_PIN_SCL 18
+#define BOARD_TOUCH_PIN_SDA 17
+#define BOARD_TOUCH_PIN_RST 15
+#define BOARD_TOUCH_PIN_INT 16
+#define BOARD_TOUCH_I2C_PORT I2C_NUM_0
+#define BOARD_TOUCH_I2C_FREQ_HZ 400000
+
+#define BOARD_LVGL_BUFFER_LINES 40

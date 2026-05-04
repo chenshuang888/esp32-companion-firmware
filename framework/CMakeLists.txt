@@ -1,0 +1,9 @@
+idf_component_register(
+    SRCS
+        "app_router.c"
+        "sub_router.c"
+    INCLUDE_DIRS
+        "."
+    REQUIRES
+        lvgl
+)
