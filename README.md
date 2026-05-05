@@ -1,5 +1,11 @@
 # ESP32 桌面伴侣固件
 
+> **🌐 桌面伴侣项目（共 4 仓）**
+> [开发主仓 / 设备固件源](https://github.com/chenshuang888/esp32-desktop-companion)
+> · **▸ 本仓：设备固件发布版**
+> · [Windows 桌面端](https://github.com/chenshuang888/esp32-companion-app)
+> · [应用市场](https://github.com/chenshuang888/esp32-marketplace)（[在线 demo](https://marketplace.chenshuang.fun)）
+
 ESP32-S3 触摸屏桌面伴侣的设备端固件。配套 [桌面端 App](https://github.com/chenshuang888/esp32-companion-app) 通过 BLE 联动，并支持从 [App 市场](https://github.com/chenshuang888/esp32-marketplace) 一键安装动态小程序。
 
 > 默认 BLE 设备名：`ESP32-S3-DEMO`
